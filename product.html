@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Product - Урок 5 и 6. Эффекты перехода и трансформации в CSS3. CSS3: медиа-запросы, адаптивная верстка.</title>
+    <meta name="description" content="Домашнее задание к уроку 5 и 6">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="images/favicon.png">
+    <meta property="og:image" content="images/dist/preview.jpg">
+    <link rel="stylesheet" href="css/product.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__top">
+        <div class="container header__container"><a class="logo" href="/"><img class="logo__img" src="images/dist/logo.svg" alt="logotype company"></a>
+          <form class="search" action="search">
+            <details class="search__details">
+              <summary class="search__summary">Browse<i class="icon-caret-down"></i></summary>
+              <div class="search__dropdown">
+                <h5 class="search__title">Woman</h5>
+                <ul class="search__list">
+                  <li class="search__item"><a class="search__link" href="#">Dresses</a></li>
+                  <li class="search__item"><a class="search__link" href="#">Tops</a></li>
+                  <li class="search__item"><a class="search__link" href="#">Sweaters/Knits</a></li>
+                  <li class="search__item"><a class="search__link" href="#">Jackets/Coats</a></li>
+                  <li class="search__item"><a class="search__link" href="#">Blazers</a></li>
+                  <li class="search__item"><a class="search__link" href="#">Denim</a></li>
+                  <li class="search__item"><a class="search__link" href="#">Leggings/Pants</a></li>
+                  <li class="search__item"><a class="search__link" href="#">Skirts/Shorts</a></li>
+                  <li class="search__item"><a class="search__link" href="#">Accessories</a></li>
+                </ul>
+                <h5 class="search__title">Men</h5>
+                <ul class="search__list">
+                  <li class="search__item"><a class="search__link" href="#">Tees/Tank tops</a></li>
+                  <li class="search__item"><a class="search__link" href="#">Shirts/Polos</a></li>
+                  <li class="search__item"><a class="search__link" href="#">Sweaters</a></li>
+                  <li class="search__item"><a class="search__link" href="#">Sweatshirts/Hoodies</a></li>
+                  <li class="search__item"><a class="search__link" href="#">Blazers</a></li>
+                  <li class="search__item"><a class="search__link" href="#">Jackets/vests</a></li>
+                </ul>
+              </div>
+            </details>
+            <input class="search__value" type="search" placeholder="Search for Item...">
+            <button class="btn search__btn" type="submit"><i class="icon-search"></i></button>
+          </form>
+          <details class="cart">
+            <summary class="cart__summary"><i class="icon-cart"></i></summary>
+            <div class="cart__dropdown">
+              <ul class="cart__list">
+                <li class="cart__item"><img class="cart__img" src="images/dist/cart-1.jpg" alt="man">
+                  <div class="cart__item-body">
+                    <p class="cart__title">Rebox Zane</p>
+                    <div class="cart__stars"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-half"></i></div>
+                    <p class="cart__price">1 x $250</p>
+                  </div><i class="icon-cancel cart__icon-cancel"></i>
+                </li>
+                <li class="cart__item"><img class="cart__img" src="images/dist/cart-2.jpg" alt="woman">
+                  <div class="cart__item-body">
+                    <p class="cart__title">Rebox Zane</p>
+                    <div class="cart__stars"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-half"></i></div>
+                    <p class="cart__price">1 x $250</p>
+                  </div><i class="icon-cancel cart__icon-cancel"></i>
+                </li>
+              </ul>
+              <div class="cart__total">
+                <div class="cart__total-text">Total</div>
+                <div class="cart__total-summ">$500</div>
+              </div><a class="btn cart__link cart__link_first" href="checkout.html"> Checkout</a><a class="btn cart__link" href="cart.html">Go to cart</a>
+            </div>
+          </details>
+          <details class="user">
+            <summary class="user__summary"><span class="user__desctop">My Account</span><i class="icon-user-circle user__mobile"></i><i class="icon-caret-down user__desctop"></i></summary>
+            <ul class="user__dropdown">
+              <li class="user__item"><a class="user__link" href="#">Login / Register</a></li>
+              <li class="user__item"><a class="user__link" href="#">Support</a></li>
+            </ul>
+          </details>
+          <button class="btn hamburger" type="button"><span class="hamburger__line"></span></button>
+        </div>
+      </div>
+      <nav class="navigation">
+        <div class="container navigation__container">
+          <ul class="menu">
+            <li class="menu__item active"><a class="menu__link menu__link_home" href="/">Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="catalog.html">Man</a>
+              <div class="submenu">
+                <div class="submenu__col">
+                  <div class="submenu__item">
+                    <h5 class="submenu__item-title">Man</h5><a class="submenu__link" href="catalog.html">Dresses</a><a class="submenu__link" href="catalog.html">Tops</a><a class="submenu__link" href="catalog.html">Sweaters/Knits</a><a class="submenu__link" href="catalog.html">Jackets/Coats</a><a class="submenu__link" href="catalog.html">Blazers</a><a class="submenu__link" href="catalog.html">Denim</a><a class="submenu__link" href="catalog.html">Leggings/Pants</a><a class="submenu__link" href="catalog.html">Skirts/Shorts</a><a class="submenu__link" href="catalog.html">Accessories</a>
+                  </div>
+                </div>
+                <div class="submenu__col">
+                  <div class="submenu__item submenu__item_mb">
+                    <h5 class="submenu__item-title">Man</h5><a class="submenu__link" href="catalog.html">Dresses</a><a class="submenu__link" href="catalog.html">Tops</a><a class="submenu__link" href="catalog.html">Sweaters/Knits</a><a class="submenu__link" href="catalog.html">Jackets/Coats</a>
+                  </div>
+                  <div class="submenu__item">
+                    <h5 class="submenu__item-title">Man</h5><a class="submenu__link" href="catalog.html">Dresses</a><a class="submenu__link" href="catalog.html">Tops</a><a class="submenu__link" href="catalog.html">Sweaters/Knits</a>
+                  </div>
+                </div>
+                <div class="submenu__col">
+                  <div class="submenu__item submenu__item_mb">
+                    <h5 class="submenu__item-title">Man</h5><a class="submenu__link" href="catalog.html">Dresses</a><a class="submenu__link" href="catalog.html">Tops</a><a class="submenu__link" href="catalog.html">Sweaters/Knits</a><a class="submenu__link" href="catalog.html">Jackets/Coats</a>
+                  </div><a class="submenu__sale-box" href="#"> <img class="submenu__img" src="images/dist/menu-sale.jpg" alt="sale">
+                    <p class="submenu__text">Super sale!</p></a>
+                </div>
+              </div>
+            </li>
+            <li class="menu__item"><a class="menu__link" href="catalog.html">Women</a>
+              <div class="submenu">
+                <div class="submenu__col">
+                  <div class="submenu__item">
+                    <h5 class="submenu__item-title">Woman</h5><a class="submenu__link" href="catalog.html">Dresses</a><a class="submenu__link" href="catalog.html">Tops</a><a class="submenu__link" href="catalog.html">Sweaters/Knits</a><a class="submenu__link" href="catalog.html">Jackets/Coats</a><a class="submenu__link" href="catalog.html">Blazers</a><a class="submenu__link" href="catalog.html">Denim</a><a class="submenu__link" href="catalog.html">Leggings/Pants</a><a class="submenu__link" href="catalog.html">Skirts/Shorts</a><a class="submenu__link" href="catalog.html">Accessories</a>
+                  </div>
+                </div>
+                <div class="submenu__col">
+                  <div class="submenu__item submenu__item_mb">
+                    <h5 class="submenu__item-title">Woman</h5><a class="submenu__link" href="catalog.html">Dresses</a><a class="submenu__link" href="catalog.html">Tops</a><a class="submenu__link" href="catalog.html">Sweaters/Knits</a><a class="submenu__link" href="catalog.html">Jackets/Coats</a>
+                  </div>
+                  <div class="submenu__item">
+                    <h5 class="submenu__item-title">Woman</h5><a class="submenu__link" href="catalog.html">Dresses</a><a class="submenu__link" href="catalog.html">Tops</a><a class="submenu__link" href="catalog.html">Sweaters/Knits</a>
+                  </div>
+                </div>
+                <div class="submenu__col">
+                  <div class="submenu__item submenu__item_mb">
+                    <h5 class="submenu__item-title">Woman</h5><a class="submenu__link" href="catalog.html">Dresses</a><a class="submenu__link" href="catalog.html">Tops</a><a class="submenu__link" href="catalog.html">Sweaters/Knits</a><a class="submenu__link" href="catalog.html">Jackets/Coats</a>
+                  </div><a class="submenu__sale-box" href="#"> <img class="submenu__img" src="images/dist/menu-sale.jpg" alt="sale">
+                    <p class="submenu__text">Super sale!</p></a>
+                </div>
+              </div>
+            </li>
+            <li class="menu__item"><a class="menu__link" href="catalog.html">Kids</a>
+              <div class="submenu">
+                <div class="submenu__col">
+                  <div class="submenu__item">
+                    <h5 class="submenu__item-title">Kids</h5><a class="submenu__link" href="catalog.html">Dresses</a><a class="submenu__link" href="catalog.html">Tops</a><a class="submenu__link" href="catalog.html">Sweaters/Knits</a><a class="submenu__link" href="catalog.html">Jackets/Coats</a><a class="submenu__link" href="catalog.html">Blazers</a><a class="submenu__link" href="catalog.html">Denim</a><a class="submenu__link" href="catalog.html">Leggings/Pants</a><a class="submenu__link" href="catalog.html">Skirts/Shorts</a><a class="submenu__link" href="catalog.html">Accessories</a>
+                  </div>
+                </div>
+                <div class="submenu__col">
+                  <div class="submenu__item submenu__item_mb">
+                    <h5 class="submenu__item-title">Kids</h5><a class="submenu__link" href="catalog.html">Dresses</a><a class="submenu__link" href="catalog.html">Tops</a><a class="submenu__link" href="catalog.html">Sweaters/Knits</a><a class="submenu__link" href="catalog.html">Jackets/Coats</a>
+                  </div>
+                  <div class="submenu__item">
+                    <h5 class="submenu__item-title">Kids</h5><a class="submenu__link" href="catalog.html">Dresses</a><a class="submenu__link" href="catalog.html">Tops</a><a class="submenu__link" href="catalog.html">Sweaters/Knits</a>
+                  </div>
+                </div>
+                <div class="submenu__col">
+                  <div class="submenu__item submenu__item_mb">
+                    <h5 class="submenu__item-title">Kids</h5><a class="submenu__link" href="catalog.html">Dresses</a><a class="submenu__link" href="catalog.html">Tops</a><a class="submenu__link" href="catalog.html">Sweaters/Knits</a><a class="submenu__link" href="catalog.html">Jackets/Coats</a>
+                  </div><a class="submenu__sale-box" href="#"> <img class="submenu__img" src="images/dist/menu-sale.jpg" alt="sale">
+                    <p class="submenu__text">Super sale!				</p></a>
+                </div>
+              </div>
+            </li>
+            <li class="menu__item"><a class="menu__link" href="catalog.html">Accoseriese</a>
+              <div class="submenu">
+                <div class="submenu__col">
+                  <div class="submenu__item">
+                    <h5 class="submenu__item-title">Accoseriese</h5><a class="submenu__link" href="catalog.html">Dresses</a><a class="submenu__link" href="catalog.html">Tops</a><a class="submenu__link" href="catalog.html">Sweaters/Knits</a><a class="submenu__link" href="catalog.html">Jackets/Coats</a><a class="submenu__link" href="catalog.html">Blazers</a><a class="submenu__link" href="catalog.html">Denim</a><a class="submenu__link" href="catalog.html">Leggings/Pants</a><a class="submenu__link" href="catalog.html">Skirts/Shorts</a><a class="submenu__link" href="catalog.html">Accessories</a>
+                  </div>
+                </div>
+                <div class="submenu__col">
+                  <div class="submenu__item submenu__item_mb">
+                    <h5 class="submenu__item-title">Accoseriese</h5><a class="submenu__link" href="catalog.html">Dresses</a><a class="submenu__link" href="catalog.html">Tops</a><a class="submenu__link" href="catalog.html">Sweaters/Knits</a><a class="submenu__link" href="catalog.html">Jackets/Coats</a>
+                  </div>
+                  <div class="submenu__item">
+                    <h5 class="submenu__item-title">Accoseriese</h5><a class="submenu__link" href="catalog.html">Dresses</a><a class="submenu__link" href="catalog.html">Tops</a><a class="submenu__link" href="catalog.html">Sweaters/Knits</a>
+                  </div>
+                </div>
+                <div class="submenu__col">
+                  <div class="submenu__item submenu__item_mb">
+                    <h5 class="submenu__item-title">Accoseriese</h5><a class="submenu__link" href="catalog.html">Dresses</a><a class="submenu__link" href="catalog.html">Tops</a><a class="submenu__link" href="catalog.html">Sweaters/Knits</a><a class="submenu__link" href="catalog.html">Jackets/Coats</a>
+                  </div><a class="submenu__sale-box" href="#"> <img class="submenu__img" src="images/dist/menu-sale.jpg" alt="sale">
+                    <p class="submenu__text">Super sale!</p></a>
+                </div>
+              </div>
+            </li>
+            <li class="menu__item"><a class="menu__link" href="catalog.html">Featured</a>
+              <div class="submenu">
+                <div class="submenu__col">
+                  <div class="submenu__item">
+                    <h5 class="submenu__item-title">Featured</h5><a class="submenu__link" href="catalog.html">Dresses</a><a class="submenu__link" href="catalog.html">Tops</a><a class="submenu__link" href="catalog.html">Sweaters/Knits</a><a class="submenu__link" href="catalog.html">Jackets/Coats</a><a class="submenu__link" href="catalog.html">Blazers</a><a class="submenu__link" href="catalog.html">Denim</a><a class="submenu__link" href="catalog.html">Leggings/Pants</a><a class="submenu__link" href="catalog.html">Skirts/Shorts</a><a class="submenu__link" href="catalog.html">Accessories</a>
+                  </div>
+                </div>
+                <div class="submenu__col">
+                  <div class="submenu__item submenu__item_mb">
+                    <h5 class="submenu__item-title">Featured</h5><a class="submenu__link" href="catalog.html">Dresses</a><a class="submenu__link" href="catalog.html">Tops</a><a class="submenu__link" href="catalog.html">Sweaters/Knits</a><a class="submenu__link" href="catalog.html">Jackets/Coats</a>
+                  </div>
+                  <div class="submenu__item">
+                    <h5 class="submenu__item-title">Featured</h5><a class="submenu__link" href="catalog.html">Dresses</a><a class="submenu__link" href="catalog.html">Tops</a><a class="submenu__link" href="catalog.html">Sweaters/Knits</a>
+                  </div>
+                </div>
+                <div class="submenu__col">
+                  <div class="submenu__item submenu__item_mb">
+                    <h5 class="submenu__item-title">Featured</h5><a class="submenu__link" href="catalog.html">Dresses</a><a class="submenu__link" href="catalog.html">Tops</a><a class="submenu__link" href="catalog.html">Sweaters/Knits</a><a class="submenu__link" href="catalog.html">Jackets/Coats</a>
+                  </div><a class="submenu__sale-box" href="#"> <img class="submenu__img" src="images/dist/menu-sale.jpg" alt="sale">
+                    <p class="submenu__text">Super sale!</p></a>
+                </div>
+              </div>
+            </li>
+            <li class="menu__item"><a class="menu__link" href="catalog.html">Hot deals</a>
+              <div class="submenu">
+                <div class="submenu__col">
+                  <div class="submenu__item">
+                    <h5 class="submenu__item-title">Hot deals</h5><a class="submenu__link" href="#">Dresses</a><a class="submenu__link" href="catalog.html">Tops</a><a class="submenu__link" href="catalog.html">Sweaters/Knits</a><a class="submenu__link" href="catalog.html">Jackets/Coats</a><a class="submenu__link" href="catalog.html">Blazers</a><a class="submenu__link" href="catalog.html">Denim</a><a class="submenu__link" href="catalog.html">Leggings/Pants</a><a class="submenu__link" href="catalog.html">Skirts/Shorts</a><a class="submenu__link" href="catalog.html">Accessories</a>
+                  </div>
+                </div>
+                <div class="submenu__col">
+                  <div class="submenu__item submenu__item_mb">
+                    <h5 class="submenu__item-title">Hot deals</h5><a class="submenu__link" href="catalog.html">Dresses</a><a class="submenu__link" href="catalog.html">Tops</a><a class="submenu__link" href="catalog.html">Sweaters/Knits</a><a class="submenu__link" href="catalog.html">Jackets/Coats</a>
+                  </div>
+                  <div class="submenu__item">
+                    <h5 class="submenu__item-title">Hot deals</h5><a class="submenu__link" href="catalog.html">Dresses</a><a class="submenu__link" href="catalog.html">Tops</a><a class="submenu__link" href="catalog.html">Sweaters/Knits</a>
+                  </div>
+                </div>
+                <div class="submenu__col">
+                  <div class="submenu__item submenu__item_mb">
+                    <h5 class="submenu__item-title">Hot deals</h5><a class="submenu__link" href="catalog.html">Dresses</a><a class="submenu__link" href="catalog.html">Tops</a><a class="submenu__link" href="catalog.html">Sweaters/Knits</a><a class="submenu__link" href="catalog.html">Jackets/Coats</a>
+                  </div><a class="submenu__sale-box" href="#"> <img class="submenu__img" src="images/dist/menu-sale.jpg" alt="sale">
+                    <p class="submenu__text">Super sale!</p></a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="content">
+      <header class="content__header">
+        <div class="container">
+          <h1 class="content__title">New Arrivals</h1>
+          <nav class="breadcrumbs"><a class="breadcrumbs__link" href="/">Home</a><a class="breadcrumbs__link" href="catalog.html">Men</a><span class="breadcrumbs__item">New Arrivals</span></nav>
+        </div>
+      </header>
+      <main>
+        <div class="page-slider">
+          <div class="page-slider__box">
+            <div class="page-slider__item"><img class="page-slider__img" src="images/dist/page-slider-1.jpg" alt="woman"></div>
+          </div>
+          <div class="page-slider__navigation">
+            <button class="btn page-slider__btn page-slider__btn_next"><i class="icon-angle-down"></i></button>
+            <button class="btn page-slider__btn page-slider__btn_prev"><i class="icon-angle-down"></i></button>
+          </div>
+        </div>
+        <div class="container">
+          <section class="collection">
+            <div class="collection__box">
+              <h2 class="collection__title">Women collection</h2>
+              <p class="collection__accost">Moschino Cheap And Chic</p>
+              <p class="collection__desc">Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals.</p>
+              <div class="collection__parameters">
+                <div class="collection__material">Material: <span class="collection__material_dark">Cotton</span></div>
+                <div class="collection__designer">Designer: <span class="collection__designer_dark">Binburhan</span></div>
+              </div>
+              <p class="collection__price">$561</p>
+            </div>
+            <form class="collection__choose">
+              <div class="collection__choose-col">
+                <label class="collection__choose-title" for="color">Choose color</label>
+                <select class="collection__select" id="color" name="color">
+                  <option value="red" selected>Red</option>
+                  <option value="green">Green</option>
+                  <option value="blue">Blue</option>
+                </select>
+              </div>
+              <div class="collection__choose-col">
+                <label class="collection__choose-title" for="size">Choose size</label>
+                <select class="collection__select" id="size" name="size">
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  <option value="XXL" selected>XXL</option>
+                </select>
+              </div>
+              <div class="collection__choose-col">
+                <label class="collection__choose-title" for="size">Quantity</label>
+                <input class="collection__input" type="number" placeholder="2" min="1">
+              </div>
+              <button class="btn collection__btn" type="submit">Add to Cart<i class="icon-cart"></i></button>
+            </form>
+          </section>
+          <section class="products">
+            <h2 class="products__title">You may like also</h2>
+            <div class="products__body">
+              <div class="products__item"><a class="product" href="product.html"><img class="product__img" src="images/dist/like-card-1.jpg" alt="like product-1">
+                  <div class="product__info">
+                    <h3 class="product__title">Blaze leggings</h3>
+                    <div class="product__price">$52.00</div>
+                  </div></a>
+                <button class="btn product__btn">Add to Cart<i class="icon-cart"></i></button>
+              </div>
+              <div class="products__item"><a class="product" href="product.html"><img class="product__img" src="images/dist/like-card-2.jpg" alt="like product-2">
+                  <div class="product__info">
+                    <h3 class="product__title">Alexa sweater</h3>
+                    <div class="product__price">$52.00</div>
+                  </div></a>
+                <button class="btn product__btn">Add to Cart<i class="icon-cart"></i></button>
+              </div>
+              <div class="products__item"><a class="product" href="product.html"><img class="product__img" src="images/dist/like-card-3.jpg" alt="like product-3">
+                  <div class="product__info">
+                    <h3 class="product__title">Agnes top</h3>
+                    <div class="product__price">$52.00</div>
+                  </div></a>
+                <button class="btn product__btn">Add to Cart<i class="icon-cart"></i></button>
+              </div>
+              <div class="products__item"><a class="product" href="product.html"><img class="product__img" src="images/dist/like-card-4.jpg" alt="like product-4">
+                  <div class="product__info">
+                    <h3 class="product__title">Sylva sweater</h3>
+                    <div class="product__price pink">$52.00</div>
+                  </div></a>
+                <button class="btn product__btn">Add to Cart<i class="icon-cart"></i></button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <footer class="footer">
+      <section class="footer__top">
+        <div class="container footer__container">
+          <div class="footer__comments slider">
+            <div class="slider__box">
+              <figure class="slider__item"><img class="slider__img" src="images/dist/avatar.jpg" alt="photo user">
+                <figcaption class="slider__text">
+                  <p class="slider__desc">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
+                  <h5 class="slider__title">Bin Burhan</h5>
+                  <p class="slider__locality">Dhaka, Bd</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="slider__navigation"><span class="slider__btn"></span><span class="slider__btn active"></span><span class="slider__btn"></span></div>
+          </div>
+          <div class="footer__subscribe subscribe">
+            <div class="subscribe__box">
+              <h2 class="subscribe__title">Subscribe</h2>
+              <p class="subscribe__desc">For our newletter and promotion</p>
+              <form class="subscribe__form" method="POST" autocomplete="off" novalidate>
+                <input class="subscribe__value" id="subscribe" type="email" name="subscribe" placeholder="Enter Your Email">
+                <button class="btn subscribe__btn" type="submit">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="footer__info">
+        <div class="container footer__container">
+          <div class="footer__brand"><a class="footer__logo logo" href="/"><img class="logo__img" src="images/dist/logo.svg" alt="logotype company"></a>
+            <div class="footer__desc">
+              <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.</p>
+              <p>Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
+            </div>
+          </div>
+          <ul class="footer__menu">
+            <li class="footer__menu-item">Company
+              <ul class="footer__submenu">
+                <li class="footer__submenu-item"><a class="footer__submenu-link" href="/">Home</a></li>
+                <li class="footer__submenu-item"><a class="footer__submenu-link" href="catalog.html">Shop</a></li>
+                <li class="footer__submenu-item"><a class="footer__submenu-link" href="#">About</a></li>
+                <li class="footer__submenu-item"><a class="footer__submenu-link" href="#">How It Works</a></li>
+                <li class="footer__submenu-item"><a class="footer__submenu-link" href="#">Contact</a></li>
+              </ul>
+            </li>
+            <li class="footer__menu-item">Information
+              <ul class="footer__submenu">
+                <li class="footer__submenu-item"><a class="footer__submenu-link" href="#">Tearms & Condition</a></li>
+                <li class="footer__submenu-item"><a class="footer__submenu-link" href="#">Privacy Policy</a></li>
+                <li class="footer__submenu-item"><a class="footer__submenu-link" href="#">How to Buy</a></li>
+                <li class="footer__submenu-item"><a class="footer__submenu-link" href="#">How to Sell</a></li>
+                <li class="footer__submenu-item"><a class="footer__submenu-link" href="#">Promotion</a></li>
+              </ul>
+            </li>
+            <li class="footer__menu-item">Shop category
+              <ul class="footer__submenu">
+                <li class="footer__submenu-item"><a class="footer__submenu-link" href="catalog.html">Men</a></li>
+                <li class="footer__submenu-item"><a class="footer__submenu-link" href="catalog.html">Women</a></li>
+                <li class="footer__submenu-item"><a class="footer__submenu-link" href="catalog.html">Child</a></li>
+                <li class="footer__submenu-item"><a class="footer__submenu-link" href="catalog.html">Apparel</a></li>
+                <li class="footer__submenu-item"><a class="footer__submenu-link" href="catalog.html">Brows All</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <div class="container footer__container">
+          <p class="copyright">© 2021  Brand  All Rights Reserved.</p>
+          <div class="social"><a class="social__link" href="https://www.facebook.com/" target="blank"> <i class="icon-facebook"></i></a><a class="social__link" href="https://twitter.com/" target="blank"> <i class="icon-twitter"></i></a><a class="social__link" href="https://ru.linkedin.com/" target="blank"> <i class="icon-linkedin"></i></a><a class="social__link" href="https://www.pinterest.ru/" target="blank"> <i class="icon-pinterest-p"></i></a><a class="social__link" href="https://plus.google.com/" target="blank"> <i class="icon-google"></i></a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
