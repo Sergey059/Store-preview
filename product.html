@@ -47,20 +47,18 @@
             <summary class="cart__summary"><i class="icon-cart"></i></summary>
             <div class="cart__dropdown">
               <ul class="cart__list">
-                <li class="cart__item"><img class="cart__img" src="images/dist/cart-1.jpg" alt="man">
-                  <div class="cart__item-body">
-                    <p class="cart__title">Rebox Zane</p>
-                    <div class="cart__stars"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-half"></i></div>
-                    <p class="cart__price">1 x $250</p>
-                  </div><i class="icon-cancel cart__icon-cancel"></i>
-                </li>
-                <li class="cart__item"><img class="cart__img" src="images/dist/cart-2.jpg" alt="woman">
-                  <div class="cart__item-body">
-                    <p class="cart__title">Rebox Zane</p>
-                    <div class="cart__stars"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-half"></i></div>
-                    <p class="cart__price">1 x $250</p>
-                  </div><i class="icon-cancel cart__icon-cancel"></i>
-                </li>
+                <li class="cart__item"><a class="cart__item-link" href="product.html"><img class="cart__img" src="images/dist/cart-1.jpg" alt="man">
+                    <div class="cart__item-body">
+                      <p class="cart__title">Rebox Zane</p>
+                      <div class="cart__stars"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-half"></i></div>
+                      <p class="cart__price">1 x $250</p>
+                    </div></a><i class="icon-cancel cart__icon-cancel"></i></li>
+                <li class="cart__item"><a class="cart__item-link" href="product.html"><img class="cart__img" src="images/dist/cart-2.jpg" alt="woman">
+                    <div class="cart__item-body">
+                      <p class="cart__title">Rebox Zane</p>
+                      <div class="cart__stars"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-half"></i></div>
+                      <p class="cart__price">1 x $250</p>
+                    </div></a><i class="icon-cancel cart__icon-cancel"></i></li>
               </ul>
               <div class="cart__total">
                 <div class="cart__total-text">Total</div>
@@ -228,7 +226,7 @@
       <header class="content__header">
         <div class="container">
           <h1 class="content__title">New Arrivals</h1>
-          <nav class="breadcrumbs"><a class="breadcrumbs__link" href="/">Home</a><a class="breadcrumbs__link" href="catalog.html">Men</a><span class="breadcrumbs__item">New Arrivals</span></nav>
+          <nav class="breadcrumbs"><a class="breadcrumbs__link" href="index.html">Home</a><a class="breadcrumbs__link" href="catalog.html">Men</a><span class="breadcrumbs__item">New Arrivals</span></nav>
         </div>
       </header>
       <main>
@@ -316,17 +314,31 @@
     <footer class="footer">
       <section class="footer__top">
         <div class="container footer__container">
-          <div class="footer__comments slider">
-            <div class="slider__box">
-              <figure class="slider__item"><img class="slider__img" src="images/dist/avatar.jpg" alt="photo user">
-                <figcaption class="slider__text">
-                  <p class="slider__desc">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
-                  <h5 class="slider__title">Bin Burhan</h5>
-                  <p class="slider__locality">Dhaka, Bd</p>
+          <div class="footer__comments tabs">
+            <div class="tabs__box">
+              <figure class="tabs__item" id="tab_1"><img class="tabs__img" src="images/dist/avatar.jpg" alt="photo user">
+                <figcaption class="tabs__text">
+                  <p class="tabs__desc">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
+                  <h5 class="tabs__title">Bin Burhan</h5>
+                  <p class="tabs__locality">Dhaka, Bd</p>
+                </figcaption>
+              </figure>
+              <figure class="tabs__item" id="tab_2"><img class="tabs__img" src="images/dist/avatar-2.jpg" alt="photo user">
+                <figcaption class="tabs__text">
+                  <p class="tabs__desc">“Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
+                  <h5 class="tabs__title">Bin Burhan</h5>
+                  <p class="tabs__locality">Dhaka, Bd</p>
+                </figcaption>
+              </figure>
+              <figure class="tabs__item" id="tab_3"><img class="tabs__img" src="images/dist/avatar-3.jpg" alt="photo user">
+                <figcaption class="tabs__text">
+                  <p class="tabs__desc">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a.”</p>
+                  <h5 class="tabs__title">Bin Burhan</h5>
+                  <p class="tabs__locality">Dhaka, Bd</p>
                 </figcaption>
               </figure>
             </div>
-            <div class="slider__navigation"><span class="slider__btn"></span><span class="slider__btn active"></span><span class="slider__btn"></span></div>
+            <div class="tabs__navigation"><span class="tabs__btn" data-tab="#tab_1"></span><span class="tabs__btn" data-tab="#tab_2"></span><span class="tabs__btn" data-tab="#tab_3"></span></div>
           </div>
           <div class="footer__subscribe subscribe">
             <div class="subscribe__box">
@@ -342,7 +354,7 @@
       </section>
       <div class="footer__info">
         <div class="container footer__container">
-          <div class="footer__brand"><a class="footer__logo logo" href="/"><img class="logo__img" src="images/dist/logo.svg" alt="logotype company"></a>
+          <div class="footer__brand"><a class="footer__logo logo" href="index.html"><img class="logo__img" src="images/dist/logo.svg" alt="logotype company"></a>
             <div class="footer__desc">
               <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.</p>
               <p>Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
