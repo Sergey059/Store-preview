@@ -10,12 +10,6 @@
     <link rel="stylesheet" href="css/home.min.css">
   </head>
   <body>
-    <div class="preloader">
-      <div class="preloader__row">
-        <div class="preloader__item"></div>
-        <div class="preloader__item"></div>
-      </div>
-    </div>
     <header class="header">
       <div class="header__top">
         <div class="container header__container"><a class="logo" href="index.html"><img class="logo__img" src="images/dist/logo.svg" alt="logotype company" width="164" height="62"></a>
@@ -230,19 +224,19 @@
     </header>
     <div class="content">
       <header class="content__header">
-        <div class="container content__container">
+        <div class="container content__container" style="background-image: url(images/dist/home-bg.jpg)">
           <h1 class="content__title">The brand <span class="content__title_small">of luxerious <span class="content__title_pinc">fashion</span></span></h1>
         </div>
       </header>
-      <main class="container">
-        <div class="offers">
+      <div class="container">
+        <section class="offers">
           <div class="offers__col"><a class="offers__card offers__card_big" href="catalog.html">
               <h2 class="offers__title">Hot deal <span class="offers__title_big">for men</span></h2><img class="offers__img" src="images/dist/man.jpg" alt="man" width="560" height="261"></a><a class="offers__card" href="catalog.html">
               <h2 class="offers__title">Luxirous & trendy <span class="offers__title_big">accesories</span></h2><img class="offers__img" src="images/dist/wallet.jpg" alt="wallet" width="560" height="261"></a></div>
           <div class="offers__col offers__col_rewers"><a class="offers__card" href="catalog.html">
               <h2 class="offers__title">30% offer <span class="offers__title_big">women</span></h2><img class="offers__img" src="images/dist/woman.jpg" alt="woman" width="560" height="261"></a><a class="offers__card offers__card_big" href="catalog.html">
               <h2 class="offers__title">New arrivals <span class="offers__title_big">for kids</span></h2><img class="offers__img" src="images/dist/kids.jpg" alt="kids" width="560" height="261"></a></div>
-        </div>
+        </section>
         <section class="products">
           <header class="products__header">
             <h2 class="products__title">Fetured Items</h2>
@@ -309,7 +303,7 @@
           <footer class="products__footer"><a class="btn products__btn" href="catalog.html"> Browse All Product<i class="icon-long-arrow-right"></i></a></footer>
         </section>
         <div class="banner"><a class="banner__link" href="#"><img class="banner__img" src="images/dist/sale.jpg" alt="girl in a hat"></a>
-          <section class="conditions">
+          <div class="conditions">
             <div class="conditions__item"><i class="icon-truck conditions__icon"></i>
               <div class="conditions__text">
                 <h3 class="conditions__title">Free Delivery</h3>
@@ -328,9 +322,9 @@
                 <p class="conditions__desc">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
               </div>
             </div>
-          </section>
+          </div>
         </div>
-      </main>
+      </div>
     </div>
     <footer class="footer">
       <section class="footer__top">
@@ -419,6 +413,20 @@
         </div>
       </div>
     </footer>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+      ym(84134215, "init", {
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true
+      });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/84134215" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
     <script src="js/app.min.js"></script>
   </body>
 </html>
